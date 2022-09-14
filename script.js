@@ -129,12 +129,12 @@ function getResult(element) {
     else {
         element.classList.add("incorrect")
     }
-    unclickAble();
+    // unclickAble();
 }
 
-function unclickAble() {
-    const
-}
+// function unclickAble() {
+//     const
+// }
 
 window.onload = function () {
 

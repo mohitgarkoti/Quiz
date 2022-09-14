@@ -127,11 +127,14 @@ function getResult(element) {
     }
 
     else {
-        console.log("incrocet")
+        element.classList.add("incorrect")
     }
+    unclickAble();
 }
 
-
+function unclickAble() {
+    const
+}
 
 window.onload = function () {
 

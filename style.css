@@ -51,6 +51,24 @@ hr {
 .option.correct {
   background-color: green;
   color: white;
+  animation: slideInLeft 0.5s ease forwards;
+}
+.option.incorrect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 10px 0 10px 0;
+
+  /* z-index: -1; */
+  z-index: -1;
+}
+.option.incorrect {
+  background-color: red;
+  color: white;
 }
 .next {
   font-size: 20px;

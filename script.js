@@ -95,7 +95,7 @@ function getNewQuestion() {
         console.log(availableOption)
         const option = document.createElement("div");
         option.innerHTML = currentQuestion.option[optionIndex];
-        option.id = i;
+        option.id = optionIndex;
         option.className = "option";
         optionContainer.appendChild(option)
         option.setAttribute("onClick", "getResult(this)");
@@ -121,7 +121,7 @@ function getResult(element) {
     console.log("element", element)
     const id = parseInt(element.id);
     if (id === currentQuestion.answer) {
-        // element.classList.add("correct")
+        element.classList.add("correct")
         console.log("correct")
         // currentQuestion.answer.className("correct")
     }

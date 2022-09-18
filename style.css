@@ -70,6 +70,9 @@ hr {
   background-color: red;
   color: white;
 }
+.option.already-answerd {
+  pointer-events: none;
+}
 .next {
   font-size: 20px;
   background-color: #058073;
@@ -96,11 +99,35 @@ h2 {
   padding-left: 30px;
 }
 
-.round {
+.answer-indicater div {
   border-radius: 52px;
   width: 30px;
   height: 30px;
   background-color: rgb(215, 215, 215);
   margin-left: 30px;
   margin-top: 7px;
+  display: inline-block;
+  background-color: #cccccc;
+}
+.answer-indicater div.correct {
+  background-color: green;
+  background-image: url("correct.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.answer-indicater div.incorrect {
+  background-color: red;
+  background-image: url("wrong.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.question-number {
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 60px;
+  color: #058073;
 }

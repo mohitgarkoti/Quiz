@@ -2,8 +2,9 @@ let questionCounter = 0;
 var currentQuestion;
 let availableQuestion = [];
 let availableOption = [];
-
-var questionsNumber, questionText, optionContainer, answerIndicaterContainer;
+let correctAnswer = 0;
+let Attempt = 0;
+var questionsNumber, questionText, optionContainer, answerIndicaterContainer, resultBox, container;
 // Questions will be asked
 const Quiz = [
     {
@@ -109,9 +110,11 @@ function getNewQuestion() {
 function next() {
     if (questionCounter === Quiz.length) {
         console.log("quiz over");
+        QuizOver();
     } else {
         getNewQuestion();
     }
+
 }
 
 function getResult(element) {
@@ -123,6 +126,7 @@ function getResult(element) {
         element.classList.add("correct");
         console.log("correct");
         updateAnswerIndicator("correct");
+        correctAnswer++;
     } else {
         element.classList.add("incorrect");
         updateAnswerIndicator("incorrect");
@@ -133,6 +137,7 @@ function getResult(element) {
             }
         }
     }
+    Attempt++;
     unclickAble();
 }
 
@@ -144,6 +149,7 @@ function unclickAble() {
 }
 
 function answerIndicater() {
+    answerIndicaterContainer.innerHTML = ''
     const totalQuestion = Quiz.length;
     for (let i = 0; i < totalQuestion; i++) {
         const indicater = document.createElement("div");
@@ -157,6 +163,35 @@ function updateAnswerIndicator(markType) {
 }
 
 
+function QuizOver() {
+    container.classList.add("hide")
+    resultBox.classList.remove("hide")
+    Quizresult();
+}
+function Quizresult() {
+    resultBox.querySelector(".total-question").innerHTML = Quiz.length;
+    resultBox.querySelector(".total-attempt").innerHTML = Attempt;
+    resultBox.querySelector(".total-correct").innerHTML = correctAnswer;
+    resultBox.querySelector(".total-wrong").innerHTML = Attempt - correctAnswer;
+    const percentage = (correctAnswer / Quiz.length) * 100;
+    resultBox.querySelector(".percentage").innerHTML = percentage.toFixed() + "%";
+    resultBox.querySelector(".score").innerHTML = Quiz.length; correctAnswer + " / " + Quiz.length;
+}
+
+
+function resetQuiz() {
+    questionCounter = 0;
+    correctAnswer = 0;
+    Attempt = 0;
+    setAvailableQuestion();
+    getNewQuestion();
+    answerIndicater();
+}
+function tryAgain() {
+    resultBox.classList.add("hide")
+    container.classList.remove("hide")
+    resetQuiz()
+}
 window.onload = function () {
     console.log(Quiz);
 
@@ -164,7 +199,8 @@ window.onload = function () {
     questionText = document.querySelector(".question-text");
     optionContainer = document.querySelector(".option-container");
     answerIndicaterContainer = document.querySelector(".answer-indicater");
-
+    resultBox = document.querySelector(".result-box")
+    container = document.querySelector(".container")
     console.log(getNewQuestion);
     setAvailableQuestion();
     getNewQuestion();

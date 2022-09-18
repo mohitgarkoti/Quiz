@@ -131,3 +131,22 @@ h2 {
   line-height: 60px;
   color: #058073;
 }
+.result-box {
+  text-align: center;
+}
+.result-box h1 {
+  font-size: 36px;
+  line-height: 42px;
+  color: #009698;
+}
+.result-box table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 8px 15px;
+}
+.result-box table td {
+  border: 1px solid #cccccc;
+}
+.hide {
+  display: none;
+}

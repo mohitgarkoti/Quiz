@@ -22,6 +22,8 @@ hr {
   margin-left: 40px;
   color: #058073;
   font-weight: bolder#058073;
+  font-size: 21px;
+  font-weight: 600;
 }
 
 .option {
@@ -82,6 +84,8 @@ hr {
   width: 80px;
   border-radius: 4px;
   border-color: #058073;
+  width: 130px;
+  height: 41px;
 }
 
 .hr2 {
@@ -99,12 +103,15 @@ h2 {
   padding-left: 30px;
 }
 
+.answer-indicater {
+  margin-left: 34px;
+}
 .answer-indicater div {
   border-radius: 52px;
   width: 30px;
   height: 30px;
   background-color: rgb(215, 215, 215);
-  margin-left: 30px;
+  /* margin-left: 30px; */
   margin-top: 7px;
   display: inline-block;
   background-color: #cccccc;
@@ -129,6 +136,7 @@ h2 {
   font-size: 25px;
   font-weight: 200;
   line-height: 60px;
+  font-weight: 600;
   color: #058073;
 }
 .result-box {
@@ -142,10 +150,13 @@ h2 {
 .result-box table {
   width: 100%;
   border-collapse: collapse;
-  padding: 8px 15px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 50px;
 }
 .result-box table td {
   border: 1px solid #cccccc;
+  padding: 8px 15px;
 }
 .hide {
   display: none;

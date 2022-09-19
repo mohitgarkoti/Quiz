@@ -116,7 +116,7 @@ const Quiz = [
     {
         q: "What is the capital of Sikkim",
         option: ["surat", "	Dispur", "Gangtok", "rajkot"],
-        answer: 1,
+        answer: 2,
     },
     {
         q: "What is the capital of Tamil Nadu	",

@@ -4,7 +4,7 @@ body {
 
 .container {
   width: 700px;
-  height: 500px;
+  height: 590px;
   background-color: white;
   margin: auto;
   border-radius: 10px;
@@ -153,6 +153,7 @@ h2 {
   font-size: 20px;
   font-weight: 600;
   margin-top: 50px;
+  text-align: left;
 }
 .result-box table td {
   border: 1px solid #cccccc;
@@ -160,4 +161,28 @@ h2 {
 }
 .hide {
   display: none;
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 364px;
+    height: 700px;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+  .option {
+    background-color: rgb(215, 215, 215);
+    width: 345px;
+    margin: auto;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  hr {
+    width: 364px;
+  }
 }

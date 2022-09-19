@@ -8,54 +8,193 @@ var questionsNumber, questionText, optionContainer, answerIndicaterContainer, re
 // Questions will be asked
 const Quiz = [
     {
-        q: "What is capital of India?",
-        option: ["gandhinagar", "Surat", "Delhi", "mumbai"],
+        q: "What is capital of Andhra Pradesh?",
+        option: ["gandhinagar", "Surat", "Delhi", "Amaravati"],
+        answer: 3,
+    },
+    {
+        q: "What is the capital of Arunachal Pradesh?",
+        option: ["	Itanagar", "	Raipur", "	Patna", "	Dispur"],
+        answer: 0,
+    },
+
+    {
+        q: "What is the capital of Assam",
+        option: ["surat", "	Dispur", "gandhinagar", "rajkot"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Bihar",
+        option: ["surat", "	Panaji", "	Patna", "Panaji"],
         answer: 2,
     },
     {
-        q: "What is the capital of Thailand?",
-        option: ["Lampang", "phuket", "Ayutthaya", "Bangkok"],
+        q: "What is the capital of Chhattisgarh",
+        option: ["Panaji", "	Raipur", "surat", "Patna"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Goa",
+        option: ["Gandhinagar", "	Panaji", "Chandigarh", "rajkot"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Gujarat",
+        option: ["surat", "	Dispur", "gandhinagar", "rajkot"],
+        answer: 2,
+    },
+    {
+        q: "What is the capital of Haryana",
+        option: ["Shimla", "Bengaluru", "	Ranchi", "	Chandigarh"],
+        answer: 3,
+    },
+    {
+        q: "What is the capital of Himachal Pradesh",
+        option: ["Shimla", "Bengaluru", "gandhinagar", "rajkot"],
+        answer: 0,
+    },
+    {
+        q: "What is the capital of Jharkhand",
+        option: ["surat", "		Ranchi", "Shimla", "Chandigarh"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Karnataka",
+        option: ["Chandigarh", "	Thiruvananthapuram", "	Bengaluru", "rajkot"],
+        answer: 2,
+    },
+    {
+        q: "What is the capital of Kerala",
+        option: ["surat", "	Dispur", "Thiruvananthapuram", "rajkot"],
+        answer: 2,
+    },
+    {
+        q: "What is the capital of Madhya Pradesh	",
+        option: ["Bhopal", "	Dispur", "Shillong", "rajkot"],
+        answer: 0,
+    },
+    {
+        q: "What is the capital of Maharashtra",
+        option: ["surat", "	Mumbai", "rajkot", "Shimla"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Manipur",
+        option: ["surat", "	Dispur", "gandhinagar", "Imphal"],
+        answer: 3,
+    },
+    {
+        q: "What is the capital of Meghalaya",
+        option: ["Shillong", "	Dispur", "gandhinagar", "rajkot"],
+        answer: 0,
+    },
+    {
+        q: "What is the capital of Mizoram",
+        option: ["surat", "		Aizawl", "gandhinagar", "rajkot"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Nagaland",
+        option: ["surat", "	Dispur", "Kohima", "rajkot"],
+        answer: 2,
+    },
+    {
+        q: "What is the capital of Odisha",
+        option: ["surat", "	Dispur", "gandhinagar", "Bhubaneswar"],
+        answer: 3,
+    },
+    {
+        q: "What is the capital of Punjab",
+        option: ["Chandigarh", "	Jaipur", "Gangtok", "rajkot"],
+        answer: 0,
+    },
+    {
+        q: "What is the capital of Rajasthan",
+        option: ["surat", "	Jaipur", "gandhinagar", "rajkot"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Sikkim",
+        option: ["surat", "	Dispur", "Gangtok", "rajkot"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Tamil Nadu	",
+        option: ["surat", "	Dispur", "gandhinagar", "Chennai"],
+        answer: 3,
+    },
+    {
+        q: "What is the capital of Telangana",
+        option: ["Hyderabad", "	Dispur", "gandhinagar", "rajkot"],
+        answer: 0,
+    },
+    {
+        q: "What is the capital of Tripura",
+        option: ["surat", "	Agartala", "gandhinagar", "rajkot"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Uttar Pradesh	",
+        option: ["surat", "	Dispur", "Lucknow", "rajkot"],
+        answer: 2,
+    },
+    {
+        q: "What is the capital of Uttarakhand",
+        option: ["surat", "	Dispur", "gandhinagar", " Dehradun (Winter)Gairsain(Summer) "],
+        answer: 3,
+    },
+    {
+        q: "What is the capital of West Bengal	",
+        option: ["Kolkata", "	Dispur", "gandhinagar", "rajkot"],
+        answer: 0,
+    },
+    {
+        q: "What is the capital of Andaman and Nicobar Islands",
+        option: ["surat", "	Chandigarh", "gandhinagar", "Port Blair"],
+        answer: 3,
+    },
+    {
+        q: "What is the capital of Chandigarh",
+        option: ["surat", "	Chandigarh", "gandhinagar", "rajkot"],
+        answer: 1,
+    },
+    {
+        q: "What is the capital of Dadra & Nagar Haveli and Daman & Diu",
+        option: ["surat", "	Dispur", "Daman", "rajkot"],
+        answer: 2,
+    },
+    {
+        q: "What is the capital of Delhi",
+        option: ["surat", "	Dispur", "gandhinagar", "Delhi"],
         answer: 3,
     },
 
     {
-        q: "What is the capital of Gujarat",
-        option: ["surat", "vadodara", "gandhinagar", "rajkot"],
+        q: "What is the capital of Jammu and Kashmir",
+        option: ["Srinagar (Summer)Jammu(Winter) ", "	Dispur", "gandhinagar", "rajkot"],
+        answer: 0,
+    },
+    {
+        q: "What is the capital of Lakshadweep",
+        option: ["surat", "	Dispur", "Kavaratti", "rajkot"],
         answer: 2,
     },
+
+    {
+        q: "What is the capital of Puducherry",
+        option: ["surat", "	Dispur", "gandhinagar", "Pondicherry"],
+        answer: 3,
+    },
+    {
+        q: "What is the capital of Ladakh",
+        option: ["Leh", "	Dispur", "gandhinagar", "rajkot"],
+        answer: 0,
+    },
+
+
+
 ];
-// [{
-//     id: 0,
-//     q: "What is capital of India?",
-//     a: [{ text: "gandhinagar", isCorrect: false },
-//     { text: "Surat", isCorrect: false },
-//     { text: "Delhi", isCorrect: true },
-//     { text: "mumbai", isCorrect: false }
-//     ]
 
-// },
-// {
-//     id: 1,
-//     q: "What is the capital of Thailand?",
-//     a: [{ text: "Lampang", isCorrect: false, isSelected: false },
-//     { text: "phuket", isCorrect: false },
-//     { text: "Ayutthaya", isCorrect: false },
-//     { text: "Bangkok", isCorrect: true }
-//     ]
-
-// },
-// {
-//     id: 2,
-//     q: "What is the capital of Gujarat",
-//     a: [{ text: "surat", isCorrect: false },
-//     { text: "vadodara", isCorrect: false },
-//     { text: "gandhinagar", isCorrect: true },
-//     { text: "rajkot", isCorrect: false }
-//     ]
-
-// }
-
-// ]
 
 console.log("quiz", Quiz);
 
